@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var Battle_1 = require("./Battle");
+var Pokemon_1 = require("./Pokemon");
+var Priority_1 = require("./Priority");
+var Attack_1 = require("./Attack");
+var a_attack = new Attack_1.Attack('Vive attaque', 40, 70, Priority_1.Priority.Low);
+var b_attack = new Attack_1.Attack('Fire bolt', 60, 40, Priority_1.Priority.High);
+var a = new Pokemon_1.Pokemon('Pikachu', 100, 30, 20, 1, undefined, a_attack);
+var b = new Pokemon_1.Pokemon('Salamèche', 100, 30, 20, 1, undefined, b_attack);
+var battle = new Battle_1.Battle(a, b);
+battle.battle();
